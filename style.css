@@ -35,7 +35,11 @@ a {
     text-decoration: none;
 }
 #menu:hover {
-    background: red;
+    background: lightgrey;
+    
+}
+#menu {
+    padding-top: 15px;
 }
 .menu1 {
     grid-area: menu1;
@@ -91,7 +95,7 @@ p {
 
 /*tablet*/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
     .item {
         border: solid yellow;
     }
