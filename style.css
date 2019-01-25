@@ -4,21 +4,25 @@ body {
 }
 
 /* Challenge 2*/
-
+#open1 {
+    font-size: 30px;
+}
 
 
 .grid-container {
     display: grid;
     grid-template-areas:
-        'logo logo logo logo'
-        'menu1 menu2 menu3 menu4'
-        'foto foto foto foto'
-        'tekst tekst open open'
-        'tekst tekst beste beste'
-        'social social social social'
-    'footer footer footer footer';
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 50px auto 300px auto auto auto ;
+        
+        'menu1 . menu2 . menu3 . menu4'
+        'logo logo logo logo logo logo logo'
+        '. open1 open1 open1 open2 . .'
+        '. open1 open1 open1 open2 beste .'
+        'foto foto foto foto foto foto foto'
+        '. tekst tekst tekst tekst teskt .'
+        '. social social social social social .'
+    '. footer footer footer footer footer .';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto ;
 }
 
 .logo {
@@ -39,22 +43,21 @@ a {
 }
 #menu {
     padding-top: 15px;
+    text-align: center;
+    background-color: white;
 }
 .menu1 {
     grid-area: menu1;
-    text-align: center;
+    
 }
 .menu2 {
     grid-area: menu2;
-    text-align: center;
 }
 .menu3 {
     grid-area: menu3;
-    text-align: center;
 }
 .menu4 {
     grid-area: menu4;
-    text-align: center;
 }
 .foto {
     grid-area: foto;
@@ -73,9 +76,13 @@ p {
     grid-area: social;
 }
 
-.open {
-    grid-area: open;
-    text-align: right;
+.open1 {
+    grid-area: open1;
+    text-align: center;
+}
+.open2 {
+    grid-area: open2;
+    text-align: center;
 }
 
 .footer {
@@ -90,12 +97,12 @@ p {
 
 .item {
     width: 100%;
-    border: solid green; 
+    border:  green; 
 }
 
 /*tablet*/
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 1500px) {
     .item {
         border: solid yellow;
     }
@@ -116,7 +123,7 @@ p {
 
 /*laptop*/
 
-@media only screen and (min-width : 800px) {
+@media only screen and (min-width : 1800px) {
     .item {
         border: solid orange;
     }
@@ -137,10 +144,10 @@ p {
 
 /*desktop*/
 
-@media only screen and (min-width : 1000px) {
+@media only screen and (min-width : 2000px) {
 
     .item {
-        border:  none;
+        border:  solid red;
     }
 .grid-container {
     display: grid;
