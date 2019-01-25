@@ -1,7 +1,6 @@
 /* ======== Base Styles (phone) ======== */
 body {
     font-family: Helvetica, sans-serif;
-    margin:0;
 }
 
 /* Challenge 2*/
@@ -19,7 +18,7 @@ body {
         'social social social social'
     'footer footer footer footer';
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 50px auto auto auto ;
+    grid-template-rows: auto 50px auto 300px auto auto auto ;
 }
 
 .logo {
@@ -91,6 +90,7 @@ p {
 
 .item {
     width: 100%;
+    border: solid green; 
 }
 
 /*tablet*/
@@ -99,7 +99,19 @@ p {
     .item {
         border: solid yellow;
     }
-
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'logo logo logo logo'
+        'menu1 menu2 menu3 menu4'
+        'foto foto foto foto'
+        'tekst tekst open open'
+        'tekst tekst open open'
+        'beste social social social'
+    'footer footer footer footer';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 50px auto 300px auto auto auto ;
+}
 }
 
 /*laptop*/
@@ -108,7 +120,19 @@ p {
     .item {
         border: solid orange;
     }
-
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'menu1 menu2 menu3 menu4'
+        'logo logo logo logo'
+        'foto foto foto foto'
+        'tekst tekst open open'
+        'tekst tekst open open'
+        'beste social social social'
+    'footer footer footer footer';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px auto auto 300px auto auto auto ;
+}
 }
 
 /*desktop*/
@@ -118,6 +142,21 @@ p {
     .item {
         border:  none;
     }
-
-
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        '. menu1 . menu2 . menu3 . menu4 .'
+        '. logo logo logo logo logo logo logo .'
+        '. foto foto foto foto foto open open .'
+        '. tekst tekst tekst tekst tekst open open .'
+        '. social social social social beste beste beste .'
+    '. footer footer footer footer footer footer footer .';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+    .logo{
+        
+    }
+    .open{
+        text-align: right;
+    }
 }
