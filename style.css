@@ -1,118 +1,58 @@
 /* ======== Base Styles (phone) ======== */
 body {
-    margin: 0;
     font-family: Helvetica, sans-serif;
-    background-color: #f4f4f4;
-}
-
-nav {
-    height: 60px;
-    background: green;
-}
-#box1 > img {
-    max-height: 26vh;
-    padding: 2vh;
-    right: 0;
-    position: absolute;
-    top: 0;
-}
-
-#box2 > img {
-    max-height: 26vh;
-    padding: 2vh;
-    left: 0;
-    position: absolute;
-    top: 0;
-}
-
-h1 {
-    position: relative;
-    color: green;
-    text-align: center;
-    z-index: 5;
-    height: 15vh;
-    padding-bottom: 5px;
-    font-size: 5vmax;
-}
-
-#flex-container {
-    display: flex;
-    flex-direction: column;
-}
-
-#box1 {
-    position: relative;
-    background-color: white;
-    width: 90%;
-    margin: 5%;
-    height: 40vh;
-    box-shadow: 4px 4px 15px grey;
-}
-
-#box1 > p {
-    text-align: left;
-    margin: 10px;
-    position: absolute;
-    font-size: 2vmax;
-    clear: left;
-}
-
-#box2 {
-    position: relative;
-    background-color: white;
-    width: 90%;
-    margin: 5%;
-    height: 40vh;
-    box-shadow: 4px 4px 15px grey;
-}
-
-#box2 > p {
-    text-align: right;
-    margin: 10px;
-    font-size: 2vmax;
-}
-
-#timeline::after {
-    content: '';
-    position: fixed;
-    width: 6px;
-    background-color: white;
-    border: solid white;
-    top: 70px;
-    left: 50vw;
-    bottom: 0;
-    z-index: -1;
+    margin:0;
 }
 
 /* Challenge 2*/
 
+
+
 .grid-container {
     display: grid;
     grid-template-areas:
-        'nav logo logo logo logo'
-        'foto foto foto foto foto'
-        'tekst tekst tekst tekst open'
-        'beste social social social social'
-        'footer footer footer footer footer';
+        'logo logo logo logo'
+        'menu1 menu2 menu3 menu4'
+        'foto foto foto foto'
+        'tekst tekst open open'
+        'tekst tekst beste beste'
+        'social social social social'
+    'footer footer footer footer';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 50px auto auto auto ;
 }
-
 
 .logo {
     grid-area: logo;
     width: inherit;
-    grid-column-end: 6;
-    grid-column-start: 1;
 }
 
 .icon {
-    width: 8%;
+    width: 12%;
     margin: 3%;
 }
-
-.nav {
-    grid-area: nav;
+a {
+    text-decoration: none;
 }
-
+#menu:hover {
+    background: red;
+}
+.menu1 {
+    grid-area: menu1;
+    text-align: center;
+}
+.menu2 {
+    grid-area: menu2;
+    text-align: center;
+}
+.menu3 {
+    grid-area: menu3;
+    text-align: center;
+}
+.menu4 {
+    grid-area: menu4;
+    text-align: center;
+}
 .foto {
     grid-area: foto;
     width: inherit;
@@ -120,7 +60,6 @@ h1 {
 
 .tekst {
     grid-area: tekst;
-    grid-column: 1/4;
 }
 
 p {
@@ -129,14 +68,11 @@ p {
 
 .social {
     grid-area: social;
-    grid-column-start: 3;
 }
 
 .open {
     grid-area: open;
     text-align: right;
-    grid-row: 3/4;
-    grid-column: 4/6;
 }
 
 .footer {
@@ -146,20 +82,18 @@ p {
 
 .beste {
     grid-area: beste;
-    width: inherit;
-    grid-column-end: 3;
+    width: 100%;
 }
 
 .item {
     width: 100%;
-    border: solid;
 }
 
 /*tablet*/
 
 @media only screen and (min-width: 600px) {
-    nav {
-        background: yellow;
+    .item {
+        border: solid yellow;
     }
 
 }
@@ -167,40 +101,8 @@ p {
 /*laptop*/
 
 @media only screen and (min-width : 800px) {
-
-
-    #box2 {
-
-        align-self: flex-end;
-        box-shadow: -4px 4px 15px grey;
-        width: 60%;
-    }
-
-    #box1 {
-        width: 60%;
-    }
-
-    nav {
-        height: 60px;
-        background: orange;
-    }
-
-    .header li {
-        float: left;
-    }
-
-    .header li a {
-        padding: 20px 30px;
-    }
-
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-
-    .header .menu-icon {
-        display: none;
+    .item {
+        border: solid orange;
     }
 
 }
@@ -209,10 +111,9 @@ p {
 
 @media only screen and (min-width : 1000px) {
 
-
-
-    nav {
-        background: red;
+    .item {
+        border: solid red;
     }
+
 
 }
